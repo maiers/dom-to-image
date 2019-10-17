@@ -105,6 +105,12 @@
                     .then(done).catch(done);
             });
 
+            it('should render svg symbol with <use/> and custom fill/stroke', function (done) {
+                loadTestPage('svg-symbol-use/dom-node.html', 'svg-symbol-use/style.css', 'svg-symbol-use/control-image')
+                    .then(renderAndCheck)
+                    .then(done).catch(done);
+            });
+
             it('should render whole node when its scrolled', function (done) {
                 var domNode;
                 loadTestPage('scroll/dom-node.html', 'scroll/style.css', 'scroll/control-image')
